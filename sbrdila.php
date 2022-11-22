@@ -9,7 +9,7 @@ if(  isset($_POST["order"])  )
 {	
 		date_default_timezone_set('Africa/Casablanca');  $datetime = date('m/d/Y h:i:s', time());  
 		function get_ip(){   if( isset($_SERVER['HTTP_CLIENT_IP']) )   {  return $_SERVER['HTTP_CLIENT_IP'];}  elseif  ( isset($_SERVER['HTTP_X_FORWARDED_FOR']) )     { return $_SERVER['HTTP_X_FORWARDED_FOR'];}   else  { return (  isset($_SERVER['REMOTE_ADDR']) ? $_SERVER['REMOTE_ADDR'] : ''   ); }     }      	$ip = get_ip();            $iplocation = @unserialize(file_get_contents('http://ip-api.com/php/'.$ip));       $iplocationcity= isset($iplocation['city']) ?  $iplocation['city'] : '';       $iplocationcountry= isset($iplocation['country']) ?  $iplocation['country'] : '';  
-		$product = 'siro';
+		$product = 'sbrdila';
 		$name = $_POST["name"];
 		$num = $_POST["num"];
 		$city = $_POST["city"];
@@ -166,7 +166,7 @@ fbq('track', 'PageView');
 								<div class="txt_error" id="txt_error_num" ></div>          					   
 						<div> <input    type="text"        placeholder="أدخل مدينتك"       name="city"         class="inputtext"                id="city"        required="required"     oninvalid="this.setCustomValidity('المرجو أدخل مدينتك ')"          oninput="setCustomValidity('')" dir="rtl"/></div>      
 								<div class="txt_error" id="txt_error_city" ></div>
-						<div> <input  style="display:none;"  value="none"   type="text"        placeholder="أدخل قياسك"        name="size"         class="inputtext"                id="size"        required="required"     oninvalid="this.setCustomValidity('المرجو أدخل قياسك')"            oninput="setCustomValidity('')" dir="rtl"/></div>      
+						<div> <input    type="text"        placeholder="أدخل قياسك"        name="size"         class="inputtext"                id="size"        required="required"     oninvalid="this.setCustomValidity('المرجو أدخل قياسك')"            oninput="setCustomValidity('')" dir="rtl"/></div>      
 								<div class="txt_error" id="txt_error_size" ></div>
 						<div> <input  style="display:none;"  value="none" type="text"        placeholder="أدخل لونك"         name="color"        class="inputtext"                id="color"       required="required"     oninvalid="this.setCustomValidity('المرجو أدخل لونك')"             oninput="setCustomValidity('')" dir="rtl"/></div>      
 							  <div class="txt_error" id="txt_error_size" ></div>
