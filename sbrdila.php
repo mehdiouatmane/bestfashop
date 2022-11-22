@@ -26,7 +26,7 @@ if(  isset($_POST["order"])  )
 			'num' => $num, 
 			'city' => $city,
 			'size' => $size,  
-            'color' => $color, 			
+                        'color' => $color, 			
 		); 
 			
 
