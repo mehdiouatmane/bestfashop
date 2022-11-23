@@ -8,7 +8,7 @@ session_start();
 
 date_default_timezone_set('Africa/Casablanca');  $datetime = date('m/d/Y h:i:s', time());  
 function get_ip(){   if( isset($_SERVER['HTTP_CLIENT_IP']) )   {  return $_SERVER['HTTP_CLIENT_IP'];}  elseif  ( isset($_SERVER['HTTP_X_FORWARDED_FOR']) )     { return $_SERVER['HTTP_X_FORWARDED_FOR'];}   else  { return (  isset($_SERVER['REMOTE_ADDR']) ? $_SERVER['REMOTE_ADDR'] : ''   ); }     }      	$ip = get_ip();            $iplocation = @unserialize(file_get_contents('http://ip-api.com/php/'.$ip));       $iplocationcity= isset($iplocation['city']) ?  $iplocation['city'] : '';       $iplocationcountry= isset($iplocation['country']) ?  $iplocation['country'] : '';  
-$OK = mysqli_query(  $con  ,	"INSERT INTO visitors ( datetime , ip )    VALUES    ( '$datetime'  , '$ip'  )"   );            
+$OK = mysqli_query(  $con  ,	"INSERT INTO visitorsbestfashop ( datetime , ip )    VALUES    ( '$datetime'  , '$ip'  )"   );            
 
 
 
@@ -38,7 +38,7 @@ if(  isset($_POST["order"])  )
 			
 
 
-	    $result = mysqli_query(  $con  ,	"INSERT INTO orderclien ( datetime , ip , product , name , num , city , size , color )    VALUES    ( '$datetime'  , '$ip' , '$product' , '$name' , '$num' , '$city' , '$size'  , '$color' )"   );            
+	    $result = mysqli_query(  $con  ,	"INSERT INTO orderclienbestfashop ( datetime , ip , product , name , num , city , size , color )    VALUES    ( '$datetime'  , '$ip' , '$product' , '$name' , '$num' , '$city' , '$size'  , '$color' )"   );            
 
 		
 				
