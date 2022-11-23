@@ -36,7 +36,7 @@ foreach($result2 as $row)
 	?> <div>      <?php echo $id ?>    <?php echo $datetime ?>    <?php echo $ip ?>    <?php echo $iplocationcity ?>   <?php echo $product ?>   <?php echo $name ?>   <?php echo $num ?>   <?php echo $city ?>   <?php echo $size ?>   <?php echo $color ?>       </div>    <?php 
 } 
 
-?>
+
 
 
 
@@ -52,3 +52,5 @@ foreach($result1 as $row)
 	?> <div>    <?php echo $id ?>    <?php echo $datetime ?>    <?php echo $ip ?>   <?php echo $iplocationcity ?>    </div>    <?php 
 }
 
+
+?>
