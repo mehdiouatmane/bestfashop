@@ -23,8 +23,11 @@ foreach($result1 as $row)
 	$id= $row["id"];
 	$datetime= $row["datetime"];	
 	$ip= $row["ip"];
-	?> <div>    <?php echo $id ?>    <?php echo $datetime ?>    <?php echo $ip ?>    </div>    <?php 
+	$iplocationcity= $row["iplocationcity"];
+	?> <div>    <?php echo $id ?>    <?php echo $datetime ?>    <?php echo $ip ?>   <?php echo $iplocationcity ?>    </div>    <?php 
 }
+
+
 
 
 
@@ -35,13 +38,14 @@ foreach($result2 as $row)
 	$id= $row["id"];	
 	$datetime= $row["datetime"];
 	$ip= $row["ip"];
+	$iplocationcity= $row["iplocationcity"];
 	$product= $row["product"];
 	$name= $row["name"];
 	$num= $row["num"];
 	$city= $row["city"];
 	$size= $row["size"];
 	$color= $row["color"];
-	?> <div>      <?php echo $id ?>    <?php echo $datetime ?>    <?php echo $ip ?>     <?php echo $product ?>   <?php echo $name ?>   <?php echo $num ?>   <?php echo $city ?>   <?php echo $size ?>   <?php echo $color ?>       </div>    <?php 
+	?> <div>      <?php echo $id ?>    <?php echo $datetime ?>    <?php echo $ip ?>    <?php echo $iplocationcity ?>   <?php echo $product ?>   <?php echo $name ?>   <?php echo $num ?>   <?php echo $city ?>   <?php echo $size ?>   <?php echo $color ?>       </div>    <?php 
 } 
 
 ?>
