@@ -29,7 +29,7 @@ foreach($result1 as $row)
 
 
 ?> <br/> <br/> les clien <br/> <?php
-$result2  =  mysqli_query(      $con   ,     " select * from orderclien"   );
+$result2  =  mysqli_query(      $con   ,     " select * from clienbarakachifae"   );
 foreach($result2 as $row)	
 {               
 	$id= $row["id"];	
