@@ -15,18 +15,6 @@ echo "online = $count_user";
 
 
 
-?> <br/> <br/> les visitors <br/> <?php  
-
-$result1  =  mysqli_query(      $con   ,    " select * from visitorsbestfashop   "    );
-foreach($result1 as $row)	
-{             
-	$id= $row["id"];
-	$datetime= $row["datetime"];	
-	$ip= $row["ip"];
-	$iplocationcity= $row["iplocationcity"];
-	?> <div>    <?php echo $id ?>    <?php echo $datetime ?>    <?php echo $ip ?>   <?php echo $iplocationcity ?>    </div>    <?php 
-}
-
 
 
 
@@ -49,3 +37,18 @@ foreach($result2 as $row)
 } 
 
 ?>
+
+
+
+?> <br/> <br/> les visitors <br/> <?php  
+
+$result1  =  mysqli_query(      $con   ,    " select * from visitorsbestfashop   "    );
+foreach($result1 as $row)	
+{             
+	$id= $row["id"];
+	$datetime= $row["datetime"];	
+	$ip= $row["ip"];
+	$iplocationcity= $row["iplocationcity"];
+	?> <div>    <?php echo $id ?>    <?php echo $datetime ?>    <?php echo $ip ?>   <?php echo $iplocationcity ?>    </div>    <?php 
+}
+
