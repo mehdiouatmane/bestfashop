@@ -17,7 +17,7 @@ echo "online = $count_user";
 
 ?> <br/> <br/> les visitors <br/> <?php  
 
-$result1  =  mysqli_query(      $con   ,    " select * from visitorsbarkachifae   "    );
+$result1  =  mysqli_query(      $con   ,    " select * from visitorsbestfashop   "    );
 foreach($result1 as $row)	
 {             
 	$id= $row["id"];
@@ -29,7 +29,7 @@ foreach($result1 as $row)
 
 
 ?> <br/> <br/> les clien <br/> <?php
-$result2  =  mysqli_query(      $con   ,     " select * from clienbarakachifae"   );
+$result2  =  mysqli_query(      $con   ,     " select * from clienbestfashop"   );
 foreach($result2 as $row)	
 {               
 	$id= $row["id"];	
